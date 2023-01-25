@@ -11,8 +11,8 @@ $(document).ready(function() {
 	function GetTableInfo() {
 		let data = {};
 		$("tbody tr").each(function(i, el){ 
-			let col1 = $(el).find("td:first").text(),
-				col2 = $(el).find("td:last").text();
+			let col1 = $(el).find("td:first").text().trim(),
+				col2 = $(el).find("td:last").text().trim();
 				data[i] = {info: col1, desc: col2}
 			//console.log(i, $(el).text());
 		});
@@ -93,9 +93,9 @@ $(document).ready(function() {
 
 	function CheckAnswers(tableInfo){
 		for (let key in tableInfo) {
-			let col2 = $("#col2" + key + " option:selected").attr("value");  			
-			let col2_ans = tableInfo[key].desc;
-			let correct = (col2==col2_ans);
+			let col2 = $("#col2" + key + " option:selected").attr("value").replace(/(?:\r\n|\r|\n| )/g, '');  			
+			let col2_ans = tableInfo[key].desc.replace(/(?:\r\n|\r|\n| )/g, '');
+			let correct = (col2==col2_ans); console.log(col2); console.log(col2_ans);
 			let chk = $("#i_" + key);
 			chk.css("visibility", "visible");
 		
@@ -106,6 +106,7 @@ $(document).ready(function() {
 			}
 
 		}
+		//console.log(tableInfo);
 	}
 });
 

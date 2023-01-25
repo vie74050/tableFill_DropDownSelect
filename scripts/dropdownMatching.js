@@ -95,7 +95,7 @@ $(document).ready(function() {
 		for (let key in tableInfo) {
 			let col2 = $("#col2" + key + " option:selected").attr("value").replace(/(?:\r\n|\r|\n| )/g, '');  			
 			let col2_ans = tableInfo[key].desc.replace(/(?:\r\n|\r|\n| )/g, '');
-			let correct = (col2==col2_ans); console.log(col2); console.log(col2_ans);
+			let correct = (col2==col2_ans); //console.log(col2); console.log(col2_ans);
 			let chk = $("#i_" + key);
 			chk.css("visibility", "visible");
 		

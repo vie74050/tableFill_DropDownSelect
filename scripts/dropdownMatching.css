@@ -1,0 +1,21 @@
+.ddm-row {
+    min-width: 500px;
+    max-width: 1920px;
+    height: fit-content;
+    display: flex;
+    gap: 12px;
+    clear: both;
+    padding: 15px;
+    border: 1px solid #aaa;
+    background: #eee;
+    vertical-align: middle;
+}
+
+.ddm-col1 {
+    min-width: 250px;
+    flex: 1;
+}
+
+.ddm-col2 {
+    width: 250px;
+}

@@ -26,25 +26,25 @@ $(document).ready(function() {
 	 */
 	function CreateDDMatching(tableInfo) {
 		let $div = $("<div id=ddMatching class=dd-matching></div>");
-		let html = "", col2Ar = [], col3Ar = [];
+		let html = "", col1Ar = [], col2Ar = [];
 	
 		for (let key in tableInfo) {
-			col2Ar.push(key +"_"+tableInfo[key].info);
-			col3Ar.push(tableInfo[key].desc);
+			col1Ar.push(key +"_"+tableInfo[key].info);
+			col2Ar.push(tableInfo[key].desc);
 		}
 		
 		//randomize column 2 values
-		col2Ar = Randomize(col2Ar);
+		col1Ar = Randomize(col1Ar);
 		
-		for (let i = 0; i < col2Ar.length; i++) {
-			let k = col2Ar[i].split("_")[0];
-			let text = col2Ar[i].split("_")[1];
+		for (let i = 0; i < col1Ar.length; i++) {
+			let k = col1Ar[i].split("_")[0];
+			let text = col1Ar[i].split("_")[1];
 			
 			// create row
-			html += "<div style='min-width:500px; height: 25px; display: block; clear: both; padding: 15px; border: 1px solid #aaa;  background: #eee; vertical-align: middle'>"
-			+ "<div id='col2" + k + "' style='min-width:250px; display: inline; float: left'>" + text +"</div>"
-			+ "<div style='width:250px; float: left; display: inline;'><select id='col3" + k + "'>"
-			+ CreateSelectOptions($.unique(col3Ar)) + "</select><i id='i_" + k +"' class='icon-remove' style='visibility: hidden'></i></div> </div>";
+			html += "<div class='ddm-row'>"
+			+ "<div id='col1" + k + "' class='ddm-col1'>" + text +"</div>"
+			+ "<div class='ddm-col2'><select id='col2" + k + "'>"
+			+ CreateSelectOptions($.unique(col2Ar)) + "</select><i id='i_" + k +"' class='icon-remove' style='visibility: hidden'></i></div> </div>";
 			
 		}		
 		
@@ -93,9 +93,9 @@ $(document).ready(function() {
 
 	function CheckAnswers(tableInfo){
 		for (let key in tableInfo) {
-			let col3 = $("#col3" + key + " option:selected").attr("value");  			
-			let col3_ans = tableInfo[key].desc;
-			let correct = (col3==col3_ans);
+			let col2 = $("#col2" + key + " option:selected").attr("value");  			
+			let col2_ans = tableInfo[key].desc;
+			let correct = (col2==col2_ans);
 			let chk = $("#i_" + key);
 			chk.css("visibility", "visible");
 		

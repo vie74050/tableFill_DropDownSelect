@@ -1,6 +1,5 @@
 .ddm-row {
     min-width: 500px;
-    max-width: 1920px;
     height: fit-content;
     display: flex;
     gap: 12px;
@@ -17,5 +16,12 @@
 }
 
 .ddm-col2 {
-    width: 250px;
+    min-width: 150px;
+    max-width: 50%;
+    width: fit-content;
+}
+
+.ddm-col2 select{
+    width: fit-content;
+    max-width: 100%;
 }

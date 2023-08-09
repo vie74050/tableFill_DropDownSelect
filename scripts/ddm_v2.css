@@ -1,16 +1,20 @@
 /* ui component styles */
-
-#ddMatching select{
-    display: inline;
-    width: calc(100% - 30px);
-    min-width: 50px;
-    max-width: 20vw;
+#ddMatching {
+    position: relative;
+    height: 500px;
+    overflow-y: scroll;
+}
+#ddMatching select {
+    width: 100%;
 }
 #ddMatching .ui-btn-container{
+    box-sizing: border-box;
     width:100%;
     background-color: #eee;
     padding: 10px;
     text-align: right;
+    position: sticky;
+    bottom: 0;
 }
 #ddMatching .ui-btn-container button{
     display: inline;
@@ -22,11 +26,12 @@
     box-shadow: none;
 }
 #ddMatching i{
+    position: absolute;
+    top: 11px;
+
+    right:2em;
     font-size: 1.5em;
-    display: contents;
-    position: relative;
-    top: 1px;
-    display: inline-block;
+    display: block;
     font-style: normal;
     font-weight: 600;
     line-height: 1;
@@ -36,26 +41,31 @@
     color: green;
 }
 .glyphicon-ok:before {
-    content: "\2713";
+    content: "\2705";
 }
 #ddMatching i.glyphicon-remove{
     color: red;
 }
 .glyphicon-remove:before {
-    content: "\2718";
+    content: "\274C";
 }
 
 /* table styles */
 
-#ddMatching table {
+#ddMatching table tbody{
     overflow-y: auto;
 }
 #ddMatching table th {
-    font-weight: 550;
-    position: sticky;
     top: 0;
+    position: sticky;
+    z-index: 1;
 }
-
+th{
+    background-color: #eee;
+}
+#ddMatching table tbody td {
+    position: relative;
+}
 #ddMatching table.left td{
     text-align: left;
 }

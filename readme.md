@@ -56,3 +56,15 @@ e.g.
 `scripts` published to BCIT Learning Hub shared folder: `https://learn.bcit.ca/shared/scripts/interactive/tableFill_DropDownSelect/`.
 
 Sample published to LOR as "DD_tableFillSample": <https://learn.bcit.ca/d2l/lor/manageLO/overview.d2l?ou=6605&loId=55220>  
+
+## Learning Hub standard practice
+
+HTML component page normally placed in `interactive/DD_tableFill/` folder and then iframe embedded into the course content page. 
+
+### Embed code for CP
+
+```html
+
+<figure class="largest"><iframe id="iframe-birth" src="../../interactive/DD_tableFill/{{filename}}.html?ou=383363" width="100%" height="510" scrolling="no" marginwidth="0" frameborder="0" onwheel="{(e)={console.log('Scrolling Me..'); e.stopPropagation();}}"></iframe></figure>
+
+```

@@ -17,7 +17,7 @@ The scripts create `<Select>` components to replace table column `<td>` content,
 
 ## ddm_v2
 
-`../scripts/ddm_v2`  
+`https://learn.bcit.ca/shared/scripts/interactive/tableFill_DropDownSelect/scripts//ddm_v2`  
 This is an updated Drop down creator that allows for multi-column tables.  
 
 ### v2 HTML
@@ -59,7 +59,7 @@ Sample published to LOR as "DD_tableFillSample": <https://learn.bcit.ca/d2l/lor/
 
 ## Learning Hub standard practice
 
-HTML component page normally placed in `interactive/DD_tableFill/` folder and then iframe embedded into the course content page. 
+HTML component page normally placed in `interactive/DD_tableFill/` folder and then iframe embedded into the course content page.
 
 ### Embed code for CP
 

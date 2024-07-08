@@ -83,6 +83,7 @@ $(document).ready(function() {
 		
 		// add bootstrap class 'selectpicker' to select
         $('select').selectpicker('data-width', 'fit');
+		$('.dropdown').on('click', function(){Clear()});
 	}
 
 	function UI_CreateSelectOptions(ar) {

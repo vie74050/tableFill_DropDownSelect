@@ -68,3 +68,34 @@ th{
 #ddMatching table.left td{
     text-align: left;
 }
+
+/** bootstrap override */
+
+#ddMatching select>option{
+max-width: 150px;
+overflow: hidden;
+word-wrap: normal !important;
+white-space: normal;
+white-space: break-spaces;
+}
+.bootstrap-select .dropdown-menu li a span.text {
+width: 100%;
+}
+.dropdown-menu>li>a {
+white-space: break-spaces;
+}
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    overflow: unset;
+    white-space: break-spaces;
+    font-weight: normal;
+}
+.bootstrap-select button.btn.dropdown-toggle {
+background-color: unset;
+color: inherit;
+line-height: unset;
+font-size: 12px;
+border: 1px solid #ccc;
+}
+.bs3.bootstrap-select .dropdown-toggle .filter-option {
+padding-left: inherit;
+}

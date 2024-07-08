@@ -80,10 +80,9 @@ $(document).ready(function() {
 			});
 
 		});
-		 
-
-		$('.selectpicker').popover
 		
+		// add bootstrap class 'selectpicker' to select
+        $('select').selectpicker('data-width', 'fit');
 	}
 
 	function UI_CreateSelectOptions(ar) {

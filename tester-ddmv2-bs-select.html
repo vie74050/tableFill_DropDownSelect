@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drop Down TableFill Activity</title>
+    <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+   
+    <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="scripts/bootstrap/css/bootstrap-select.min.css">
+
+    <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/bootstrap/js/bootstrap-select.min.js"></script>
+
+    <!-- LTC CP styles -->
+    <link rel="stylesheet" href="https://ltc.bcit.ca/public/v1/css/bcit.css"/>
+    
+    <link href="scripts/ddm_v2.css" rel="stylesheet" />
+
+    <style>
+      #ddMatching {
+        height: 100vh;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // reshuffle tbody rows randomly
+        var tbody = $("table tbody");
+        tbody.find("tr").sort(function () {
+          return Math.round(Math.random()) - 0.5;
+        }).appendTo(tbody);
+
+      });
+    </script>
+
+  </head>
+  <body>
+    <table class="left">
+      <thead>
+        <tr>
+          <th class="_ddm" width="150px">Principles of TVIC</th>
+          <th class="_ddm" width="45%">Potential Barriers to Implementation in an ICU</th>
+          <th>Examples of implementation</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Safety</td>       
+          <td>
+            Every consciously aware patient within the PICU may reasonably experience physical distress through invasive/painful procedures, pain crises from sources of admission or invasive medical equipment, and feelings of impending death/ instability. All of these ways of feeling "physically unsafe" are closely integrated into a lack of emotional safety. 
+          </td>
+          <td>
+            <p>Central nervous system regulation and treatment of physiological stress, often achieved with pain and anxiety management through non-pharmacological (e.g. cognitive behavioural therapy, play therapy, emotional regulation techniques, journaling) and pharmacological management. </p>
+            <p>Establishing a predictable routine, providing structure and consistency to eliminate anticipatory stress.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Safety</td>        
+          <td>
+            Families whose children are admitted to a PICU often experience psychological and emotional distress from watching their child in physical discomfort or the fear of PICU-related complications, including death. 
+          </td>
+          <td>
+            <p>Central nervous system regulation and treatment of physiological stress, often achieved with pain and anxiety management through non-pharmacological (e.g. cognitive behavioural therapy, play therapy, emotional regulation techniques, journaling) and pharmacological management. </p>
+            <p>Establishing a predictable routine, providing structure and consistency to eliminate anticipatory stress.</p>
+          </td>  
+        </tr>
+
+        <tr>
+          <td>Safety</td>
+          <td>
+            Physical safety is prioritized over psychological safety. The dynamic nature of critical illness makes standardizing psychological safety protocols impossible in the environment. 
+          </td>
+          <td>
+            <p>Daily review of physical safety measures that disregard emotional and psychological safety, and the reprioritization of these standards as soon as medically feasible. </p>
+          </td>   
+        </tr>
+
+        <tr>
+          <td>Trustworthiness and transparency</td>
+          <td>
+            High medical complexity and advanced PICU equipment impact families' ability to understand how and why decisions are made.  
+          </td>
+          <td>
+            <p>Prioritizing pre-procedure/care explanations. Ensure honesty when care will cause discomfort/pain/anxiety, and realistic expectation setting.</p>
+
+            <p>Consistent and constant education, re-explaining in multiple ways to increase health literacy.</p>
+          </td>   
+        </tr>
+
+        <tr>
+          <td>Trustworthiness and transparency</td>       
+          <td>
+            Procedures and admissions often require families to leave the room, limiting physical transparency of care.  
+          </td>
+          <td>
+            <p>Prioritizing pre-procedure/care explanations. Ensure honesty when care will cause discomfort/pain/anxiety, and realistic expectation setting.</p>
+            
+            <p>Consistent and constant education, re-explaining in multiple ways to increase health literacy.</p>
+          </td>      
+        </tr>
+
+        <tr>
+          <td>Trustworthiness and transparency</td>
+        
+          <td>
+            Rotating staff, multiple interdisciplinary team members with varying roles, specialty services, and differing learner levels (resident vs. fellow vs. staff physician) can lead to confusing or unclear messaging and discrepancies in care delivery. 
+          </td>
+          <td>
+            <p>Clear communication between teams to ensure consistent messaging with all health providers and family involvement in interdisciplinary rounds. </p>
+
+            <p>Consistent staffing over multiple days/shifts - clear role clarification for everyone who enters the room. </p>
+
+            <p>Patients with multiple team involvements should cluster assessments and family updates. </p>
+
+            <p>Establishing a continuity physician for complex, long-term, or multi-system patients.</p>
+
+          </td>           
+        </tr>
+
+        <tr>
+          <td>Peer Support</td>       
+          <td>
+            Visitor restrictions can impact allotted amounts of support personnel at the bedside.
+          </td>
+          <td>
+            <p>Available family space to allow for on-campus support during visitor limitation rules.</p>
+
+            <p>Allowing parents/family members to stay in rooms when safe. Prioritizing prompt updates and allowing support individuals to re-enter rooms if asked to leave for procedures.</p>
+
+          </td>    
+        </tr>
+
+        <tr>
+          <td>Peer Support</td>       
+          <td>
+            Pediatric centres inherently favour parental support for children and adolescents; this may not feel supportive of the adolescent community, which relies on friends for primary support and relationships. 
+          </td>
+          <td>
+            <p>Advocating for family and patient autonomy about visitor restriction- adhering to the rules of a locked unit. </p>
+          </td>    
+        </tr>
+
+        <tr>
+          <td>Peer Support</td>       
+          <td>
+            The heterogeneous nature of PICU admissions limits the creation of peer support networks often seen in other subspecialties (oncology, cardiology, etc.).
+          </td>
+          <td>
+            <p>If support programs are available in your centre, facilitate their connection. </p>
+          </td>    
+        </tr>
+        
+        <tr>
+          <td>Peer Support</td>       
+          <td>
+            PICUs are typically situated in major cities, and patients are transported in from surrounding areas, creating physical boundaries from peer and family support. 
+          </td>
+          <td>
+            <p>Facilitating technology use (iPad, video chat, phones, etc.) for out-of-town support networks. </p>
+          </td>    
+        </tr>
+
+        <tr>
+          <td>Collaboration</td>       
+          <td>
+            The level of health literacy and medical complexity of the PICU setting creates an inherent power dynamic during moments of collaboration. 
+          </td>
+          <td>
+            <p>Proactively building positive relationships with families and patients by establishing rapport before significant events and team meetings.</p>
+            <p>Day planning with families and patients at the start of each shift. Following through with promises and requests. Acknowledging and explaining deviations from the established plan.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Collaboration</td>       
+          <td>
+            Changes in teams or multiple team inputs can create inconsistencies in the messaging or plan of care. Strong interdisciplinary collaborations need to be demonstrated to encourage family involvement.  
+          </td>
+          <td>
+            <p>Scheduled multidisciplinary team meetings for complex, multi-system, long-term patients. </p>
+            <p>Dual (family and provider) goal-setting throughout all levels of care, including medical decision-making and everyday care modalities. </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Empowerment and Choice</td>       
+          <td>
+            The need to prioritize life-saving and physical safety measures over patient and family preferences, including interdisciplinary team and learner assessments, PICU standards, monitoring levels, and invasive medical care that disregards patients' bodily autonomy.  
+          </td>
+          <td>
+            <p>Early conversation with families and patients around self-identified triggers. Collaborate to find solutions where possible or educate and give rationale around unavoidable triggers. </p>
+            <p>Create an environment that empowers families to feel safe advocating for themselves. </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Empowerment and Choice</td>       
+          <td>
+            Pediatric patient populations under the age of consent are removed from the medical decision-making process in general. Depending on age, there is a lack of cognitive understanding of why they need to do things that cause discomfort, pain, and anxiety.  
+          </td>
+          <td>
+            <p>Give small choices about how things are done, and consciously involve patients and families in simple and automatic tasks for providers. Cluster physical assessments with other providers, give patients a choice around how many people physically assess them.</p>
+            <p>Critically review standards that go against patient autonomy. Are they still required for physical safety, or can you prioritize psychological safety? For example, staying in hospital gowns with lights on and curtains open. </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Cultural, Historical, and Gender issues </td>       
+          <td>
+            Healthcare programs have historical structures and policies that reflect colonialism, heteronormative beliefs, and cultural norms privileging whiteness that may cause re-traumatization.  
+          </td>
+          <td>
+            <p>Prioritizing family and cultural-based practices, such as feeding regimes, skin-to-skin, and parent-to-child bonding practices are often hindered in critical care settings.</p>
+            <p>Awareness and active rephrasing of colloquial terms that are rooted in racism or heteronormative views. </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Cultural, Historical, and Gender issues </td>       
+          <td>
+            Individuals who have experienced historical, gender-based and cultural trauma may have increased difficulty coping with the traumatic environment of the PICU. If not viewed with a TVIC lens, the subsequent emotional dysregulation can rupture relationships with healthcare providers.
+          </td>
+          <td>
+            <p>Staff education to increase awareness of historical and gender-based trauma.</p>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+    <script src="scripts/ddm_v2.js" type="text/javascript"></script> 
+  </body>
+</html>

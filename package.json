@@ -4,7 +4,8 @@
     "description": "Drop Down matching table fill activity",
     "scripts": {
         "pack-libs": "node pack-libs.js",
-        "pack-ddm": "node pack-ddm.js"
+        "pack-ddm": "node pack-ddm.js",
+        "dist": "npm run pack-libs && npm run pack-ddm"
     },
     "devDependencies": {
         "node-minify": "^3.6.0"

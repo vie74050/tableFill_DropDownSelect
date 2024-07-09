@@ -2,22 +2,8 @@ const fs = require('fs');
 
 const cssdir = "./scripts/libs/css/";
 const jsdir = "./scripts/libs/js/";
-const cssout = "./dist/ddmlibs.min.css";
-const jsout = "./dist/ddmlibs.min.js";
-
-function packageFolder(dir, out) {
-    // clear file if already exists
-    fs.writeFileSync(out, '');
-
-    fs.readdirSync(dir).forEach((file) => {
-        let filepath = dir + file; console.log(filepath);
-        if (fs.lstatSync(filepath).isFile())
-            fs.appendFileSync(
-              out,
-              fs.readFileSync(filepath).toString()
-            );
-    }); 
-}
+const cssout = "./dist/scripts/css/ddm_v2-libs.min.css";
+const jsout = "./dist/scripts/js/ddm_v2-libs.min.js";
 
 // pack files in order
 const cssfiles = [cssdir+'bootstrap.min.css', cssdir+'bootstrap.min.css', cssdir+'bootstrap-select.min.css'];

@@ -14,8 +14,19 @@ $(document).ready(function() {
 		const $div = $("<div id='ddMatching'></div>");
 		$("body").append($div);			
 
-		$div.append($("table"));
+		// get table
+		const $table = $("table");
+		// check if table has _random class
+		console.log("Optional: add _randomize class to table attribute to randomize rows");
+		if ($table.hasClass("_randomize")) {
+			// randomize rows
+			let tbody = $table.find("tbody");
+			tbody.find("tr").sort(function () {
+				return Math.round(Math.random()) - 0.5;
+			}).appendTo(tbody);
+		}
 
+		$div.append($("table"));
 		// buttons
 		const $uibtns = UI_createBns();
 		$div.append($uibtns);
@@ -42,6 +53,7 @@ $(document).ready(function() {
 	*/
 	function UI_CreateSelects() {
 		// get th not _static class
+		console.log("Optional: add _ddm to th attribute to mark column as dropdown matching activity");
 		let $ths = $("th._ddm");
 
 		if ($ths.length==0) {
@@ -61,7 +73,7 @@ $(document).ready(function() {
 			});
 			
 			// order, only unique values
-			//selOptions = Randomize(selOptions);
+			
 			let uniqueRandom = Array.from(new Set(selOptions.sort()));//console.log(new Set(selOptions), selOptions);
 
 			// replace td content with select component

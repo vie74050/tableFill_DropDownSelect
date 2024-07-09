@@ -1,0 +1,12 @@
+{
+    "name": "ddm",
+    "version": "2.0.0",
+    "description": "Drop Down matching table fill activity",
+    "scripts": {
+        "pack-libs": "node pack-libs.js",
+        "pack-ddm": "node pack-ddm.js"
+    },
+    "devDependencies": {
+        "node-minify": "^3.6.0"
+    }
+}

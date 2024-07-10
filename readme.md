@@ -68,17 +68,16 @@ If no `th` marked with class `_ddm`, then the last column will be converted.
 #### pack-libs
 
 `pack-libs` - Combines external minified resources from the `./scripts/libs/` to `./dist/`.
-These are the `jquery` and `bootstrap` files and should be loaded first in `<head>`.  
+These are the `jquery` and `bootstrap` files and should be loaded first.  
 
 There should be no need to repackage these unless there are critical updates in `bootstrap` and `jquery` support.
 
 **Note** that `bootstrap-select` version require specific `bootstrap` and `jquery` versions.  Do not update unless all are compatible.
 See <https://developer.snapappointments.com/bootstrap-select/> documentation.
 
-#### dist
+#### pack-ddm or dist
 
-Use `npm run pack-ddm` which minfies ddm sources and combines minified files to `./dist`.  Can do just `pack-ddm` if libs have not changed.
-Can run `npm run dist` to run both steps.
+Use `npm run pack-ddm` which minfies ddm sources and combines minified files to `./dist`.  Can do just `pack-ddm` if libs have not changed or run `npm run dist` to run both steps.
 
 ## Learning Hub standard practice
 

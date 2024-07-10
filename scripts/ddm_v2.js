@@ -125,7 +125,7 @@ $(document).ready(function() {
 	}
 	
 	function ResetAnswers() {
-		$("select").val('-1');
+		$("select").val('-1').selectpicker('val','-1');
 		Clear();
 	}
 
